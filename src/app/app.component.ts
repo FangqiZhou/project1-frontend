@@ -71,8 +71,8 @@ export class AppComponent implements OnInit{
     );
   }
 
-  public onDeleteEmployee(employeeId: number): void{
-    this.employeeService.deleteEmployee(employeeId).subscribe(
+  public onDeleteEmployee(employeeId?: number): void{
+    this.employeeService.deleteEmployee(employeeId!).subscribe(
       (response: void) => {
         console.log(response);
         this.getEmployees();
